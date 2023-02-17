@@ -2,7 +2,7 @@
 /**
  * main - prints to string
  * Description: Prints without puts and printf
- * Returns: 1 (Failure)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
