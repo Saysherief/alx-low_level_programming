@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+/**
+ * main - prints to string
+ * Description: Prints without puts and printf
+ * Returns 1
+ */
+
+int main(void)
+{
+	char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	__asm__ ("Message": "Msg" (msg))
+	;return (1);
+}
