@@ -18,8 +18,10 @@ int main(void)
 		{
 			for (dig2 = dig1; dig2 < 10; dig2++)
 			{
-				for (ldig2 = ldig1 + 1; ldig2 < 10; ldig2++)
+				for (ldig2 = ldig1; ldig2 < 10; ldig2++)
 				{
+					if (dig1 == dig2 && ldig1 == ldig2)
+						continue;
 					putchar(dig1 + '0');
 					putchar(ldig1 + '0');
 					putchar(' ');
