@@ -8,31 +8,21 @@
 int main(void)
 {
 	int dig1;
-	int ldig1;
 	int dig2;
-	int ldig2;
 
-	for (dig1 = 0; dig1 < 10; dig1++)
+	for (dig1 = 0; dig1 < 99; dig1++)
 	{
-		for (ldig1 = 0; ldig1 < 10; ldig1++)
+		for (dig2 = dig1 + 1; dig2 < 100; dig2++)
 		{
-			for (dig2 = dig1; dig2 < 10; dig2++)
-			{
-				for (ldig2 = ldig1; ldig2 < 10; ldig2++)
-				{
-					if (dig1 == dig2 && ldig1 == ldig2)
-						continue;
-					putchar(dig1 + '0');
-					putchar(ldig1 + '0');
-					putchar(' ');
-					putchar(dig2 + '0');
-					putchar(ldig2 + '0');
-					if (dig1 == 9 && ldig1 == 8)
-						break;
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar((dig1 / 10) + '0');
+			putchar((dig1 % 10) + '0');
+			putchar(' ');
+			putchar((dig2 / 10) + '0');
+			putchar((dig2 % 10) + '0');
+			if (dig1 == 98 && dig2 == 99)
+				break;
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
