@@ -14,8 +14,8 @@ int main(void)
 		putchar(dig + '0');
 		if (dig == 9)
 			continue;
-		putchar(' ');
 		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
