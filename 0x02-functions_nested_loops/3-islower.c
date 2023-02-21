@@ -5,9 +5,9 @@
  * Description - uses condition
  * Return: int 0 or 1
  */
-int _islower(int alpha)
+int _islower(int c)
 {
-	if (alpha >= 'a' && alpha <= 'z')
+	if (c >= 'a' && c <= 'z')
 	{
 		return (1);
 	}
