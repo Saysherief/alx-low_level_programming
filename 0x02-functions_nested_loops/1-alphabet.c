@@ -3,7 +3,7 @@
 /**
  * main - Prints alphabets
  * Description - uses the function _putchar()
- * Return: Always 0.
+ * Return: void - nothing
  */
 void print_alphabet(void)
 {
@@ -14,5 +14,5 @@ void print_alphabet(void)
 		_putchar(alpha);
 	}
 	_putchar('\n');
-	return (0);
+	return;
 }
