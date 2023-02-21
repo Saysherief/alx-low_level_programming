@@ -3,6 +3,7 @@
 /**
  * _isalpha- checks if 'c' is among alphabets ALPHABETS
  * Description - uses condition to check member 'c'
+ * @c: the character to be checked
  * Return: int 0 or 1
  */
 int _isalpha(int c)
