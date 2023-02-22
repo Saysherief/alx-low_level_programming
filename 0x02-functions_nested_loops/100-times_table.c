@@ -14,9 +14,9 @@ void print_times_table(int n)
 
 	if (n >= 0 && n <= 15)
 	{
-		for (dig1 = 0; dig1 < n; dig1++)
+		for (dig1 = 0; dig1 <= n; dig1++)
 		{
-			for (dig2 = 0; dig2 < n; dig2++)
+			for (dig2 = 0; dig2 <= n; dig2++)
 			{
 				ans = dig1 * dig2;
 				if ((ans / 10) == 0)
@@ -30,7 +30,7 @@ void print_times_table(int n)
 					_putchar((ans / 10) + '0');
 					_putchar((ans % 10) + '0');
 				}
-				if (dig2 == 9)
+				if (dig2 == n)
 					continue;
 				_putchar(',');
 				_putchar(' ');
