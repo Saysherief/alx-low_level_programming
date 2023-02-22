@@ -19,14 +19,18 @@ void print_times_table(int n)
 			for (dig2 = 0; dig2 <= n; dig2++)
 			{
 				ans = dig1 * dig2;
-				if ((ans / 10) == 0)
+				if ((ans / 10) == 0 || (ans / 100) == 0)
 				{
 					if (dig2 != 0)
+					{
 						_putchar(' ');
+						_putchar(' ');
+					}
 					_putchar((ans % 10) + '0');
 				}
 				else
 				{
+					_putchar((ans / 100) + '0');
 					_putchar((ans / 10) + '0');
 					_putchar((ans % 10) + '0');
 				}
