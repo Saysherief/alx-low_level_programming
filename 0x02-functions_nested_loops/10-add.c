@@ -7,7 +7,7 @@
  * @n2: an intiger
  * Return: value of the given sum
  */
-int int add(int n1, int n2)
+int add(int n1, int n2)
 {
 	int sum;
 
