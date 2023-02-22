@@ -19,10 +19,7 @@ void jack_bauer(void)
 			_putchar(':');
 			_putchar((dig2 / 10) + '0');
 			_putchar((dig2 % 10) + '0');
-			if (dig1 == 23 && dig2 == 59)
-				break;
 			_putchar('\n');
 		}
 	}
-	_putchar('\n');
 }
