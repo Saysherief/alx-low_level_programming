@@ -8,15 +8,15 @@
 int main(void)
 {
 	int i;
-	unsigned long int sum1 = 0, sum2 = 1;
-	unsigned long int fib;
+	unsigned long long int sum1 = 0, sum2 = 1;
+	unsigned long long int fib;
 
 	for (i = 0; i  < 98; i++)
 	{
 		fib = sum1 + sum2;
 		sum1 = sum2;
 		sum2 = fib;
-		printf("%lu", fib);
+		printf("%llu", fib);
 		if (i == 97)
 			break;
 		printf(", ");
