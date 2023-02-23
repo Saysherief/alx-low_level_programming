@@ -9,21 +9,21 @@ int main(void)
 {
 	int i;
 	int sum1 = 0, sum2 = 1;
-	int fib;
+	int fib, esum = 0;
 
 	for (i = 0; i  < 40; i++)
 	{
 		fib = sum1 + sum2;
 		sum1 = sum2;
 		sum2 = fib;
-		if (fib <= 4000000 || (fib % 2) == 0)
+		if ((fib % 2) == 0)
 		{
-			printf("%d", fib);
-			if (i == 49 || fib > 4000000)
+			if (fib > 4000000)
 				break;
-			printf(", ");
+			esum += fib;
 		}
 	}
+	printf("%d", esum);
 	printf("\n");
 	return (0);
 }
