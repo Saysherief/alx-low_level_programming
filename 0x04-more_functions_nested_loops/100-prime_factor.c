@@ -11,15 +11,14 @@ int main(void)
 	unsigned long num, lpf;
 
 	num = 612852475143;
-	for (lpf = 2; fp <= num; lpf++)
+	for (lpf = 2; lpf <= num; lpf++)
 	{
 		if (num % lpf == 0)
 		{
 			num /= lpf;
-			lpf--;
 		}
 
 	}
-	printf("%lu\n", lpf);
+	printf("%lu\n", --lpf);
 	return (0);
 }
