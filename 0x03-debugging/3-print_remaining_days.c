@@ -12,11 +12,15 @@
 
 void print_remaining_days(int month, int day, int year)
 {
+	int Feb_lday = day;
+
 	int convert_day(int month, int day);
 	if ((year % 4 == 0 || year % 400 == 0) && (year % 100 == 0))
 	{
 		if (month >= 2 && day >= 60)
 		{
+			if (month == 2 && Feb_lday == 29)
+				day--;
 			day++;
 		}
 
