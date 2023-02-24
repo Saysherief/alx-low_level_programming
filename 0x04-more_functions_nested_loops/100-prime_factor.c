@@ -16,9 +16,10 @@ int main(void)
 		if (num % lpf == 0)
 		{
 			num /= lpf;
+			lpf--;
 		}
 
 	}
-	printf("%lu\n", --lpf);
+	printf("%lu\n", lpf);
 	return (0);
 }
