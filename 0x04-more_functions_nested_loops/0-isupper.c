@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper - retutns 1 for uppercase letters and 0 for the rest
+ * _isupper - returns 1 for uppercase letters and 0 for the rest
  * Description - uses the parameter @c to test the condition
  * @c: The character to check the ASCII code
  * Return: 1 if it is an uppercase character else 0
