@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
  * main - Starting point of a function
