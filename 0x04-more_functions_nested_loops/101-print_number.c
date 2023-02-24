@@ -8,13 +8,15 @@
  */
 void print_number(int n)
 {
-	unsigned int dig = 1, value = n;
+	unsigned int dig, value;
 
+	dig = 1;
+	value = n;
 	if (n < 0)
 	{
 		_putchar('-');
-		value *= -1;
-		n *= -1;
+		value *= (-1);
+		n *= (-1);
 	}
 	while (n > 9)
 	{
