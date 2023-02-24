@@ -25,5 +25,4 @@ void print_number(int n)
 	{
 		_putchar(((value / dig) % 10) + '0');
 	}
-	_putchar('\n');
 }
