@@ -7,14 +7,8 @@
  * Return: integer multiplication of @a and @b
  */
 
-int _isdigit(int c)
+int mul(int a, int b)
 {
-	if (c >= 48 && c <= 57)
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	int m  = a * b;
+	return (m);
 }
