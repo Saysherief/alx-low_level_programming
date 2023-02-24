@@ -2,7 +2,7 @@
 
 /**
  * print_line - draws a straight line in the terminal
- * @n - number of times _ shoulld be printed
+ * @n : number of times _ shoulld be printed
  * line should end with new line
  * Return : Nothing
  */
