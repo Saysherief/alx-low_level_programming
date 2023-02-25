@@ -8,19 +8,20 @@
  */
 void print_number(int n)
 {
-	unsigned int dig, value;
+	unsigned int dig, value, subs;
 
 	dig = 1;
 	value = n;
+	subs = n;
 	if (n < 0)
 	{
 		_putchar('-');
 		value *= (-1);
-		n *= (-1);
+		subs *= (-1);
 	}
-	while (n > 9)
+	while (subs > 9)
 	{
-		n /= 10;
+		subs /= 10;
 		dig *= 10;
 	}
 	for (; dig >= 1; dig /= 10)
