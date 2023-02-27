@@ -5,7 +5,7 @@
  * @str: a pointer to the string /the first char on the string
  * Return: Nothing
  */
-void _puts(char *str)
+void puts_half(char *str)
 {
 	int len = 0;
 
