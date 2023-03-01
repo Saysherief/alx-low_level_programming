@@ -1,27 +1,23 @@
 #include "main.h"
 
 /**
- * rev_string - reverses a string and changes it
+ * _atoi - converts a string
  * @s: a pointer to the string /the first char on the string
  * Return: Nothing
  */
-void rev_string(char *s)
+void print_rev(char *s)
 {
 	int len = 0;
-	int i = 0;
-	char temp = s[0];
 
 	while (s[len] != '\0')
 	{
 		len++;
 	}
 	len--;
-	while (i < len)
+	while (len >= 0)
 	{
-		temp = s[len];
-		s[len] = s[i];
-		s[i] = temp;
-		i++;
+		_putchar(s[len]);
 		len--;
 	}
+	_putchar('\n');
 }
