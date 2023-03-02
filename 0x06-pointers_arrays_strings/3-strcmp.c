@@ -2,11 +2,11 @@
 
 /**
  * _strcmp - compares the two strings and returns value respectively
- * @s2: address of the second string
- * @s1: address of the first string
+ * @s1: a pointer to the first string
+ * @s2: a pointer to the second string
  * Return: value of the comparision
  */
-int *_strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
 
