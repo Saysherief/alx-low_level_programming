@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 
 /**
@@ -34,5 +35,5 @@ char *_strstr(char *haystack, char *needle)
 	}
 	if (needle[0] == '\0')
 		return (haystack);
-	return ('\0');
+	return (NULL);
 }
