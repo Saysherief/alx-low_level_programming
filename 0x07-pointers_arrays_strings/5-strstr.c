@@ -11,7 +11,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i, j = 0, o, check = 0;
+	unsigned int i, j = 0, o;/*o pointer at 1st occurance*/
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
@@ -21,21 +21,18 @@ char *_strstr(char *haystack, char *needle)
 			{
 				if (haystack[o] == needle[j])
 				{
-					check = 1;
-					if (needle[j] == '\0')
+					if (needle[j + 1] == '\0')
 						return (haystack + i);
 					continue;
 				}
 				else
 				{
-					check = 0;
-					i = o;
 					break;
 				}
 			}
 		}
 	}
-	if (check == 1)
-		return (haystack + --i);
+	if (needle[0] == '\0')
+		return (haystack);
 	return ('\0');
 }
