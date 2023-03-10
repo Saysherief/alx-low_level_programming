@@ -11,7 +11,7 @@ int check(int n, int a)
 	if (a * a == n)
 		return (a);
 	else if (a * a > n)
-		return(-1);
+		return (-1);
 	return (check(n, a + 1));
 }
 
