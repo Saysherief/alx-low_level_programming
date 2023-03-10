@@ -3,21 +3,33 @@
 /**
  * _atoi - converts a string
  * @s: a pointer to the string /the first char on the string
- * Return: Nothing
+ * Return: integer type of the string
  */
-void print_rev(char *s)
+int _atoi(char *s)
 {
-	int len = 0;
+	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
 
-	while (s[len] != '\0')
+	while (*(s + count) != '\0')
 	{
-		len++;
+		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
+			break;
+
+		if (*(s + count) == '-')
+			pn *= -1;
+
+		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
+		{
+			if (size > 0)
+				m *= 10;
+			size++;
+		}
+		count++;
 	}
-	len--;
-	while (len >= 0)
+
+	for (i = count - size; i < count; i++)
 	{
-		_putchar(s[len]);
-		len--;
+		oi = oi + ((*(s + i) - 48) * m);
+		m /= 10;
 	}
-	_putchar('\n');
+	return (oi * pn);
 }
