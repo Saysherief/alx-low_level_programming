@@ -23,11 +23,18 @@ int main(int argc, char **argv)
 	}
 	while (argv[argc][len] != '\0')
 	{
+		if (argv[argc][0] == '-')
+			len++;
 		if (!isdigit(argv[argc][len++]))
 		{
 			printf("Error\n");
 			return (1);
 		}
+	}
+	if ((argv[argc][0] == '-') && (argv[argc][len] == '\0'))
+	{
+		printf("0\n");
+		return (0);
 	}
 	change = atoi(argv[argc]) / changes[i];
 	no_cents += change;/*adds no of coins of the change*/
