@@ -21,10 +21,10 @@ int main(int argc, char **argv)
 		printf("Error\n");
 		return (1);
 	}
+	if (argv[argc][0] == '-')
+		len++;
 	while (argv[argc][len] != '\0')
 	{
-		if (argv[argc][0] == '-')
-			len++;
 		if (!isdigit(argv[argc][len++]))
 		{
 			printf("Error\n");
