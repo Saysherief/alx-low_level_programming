@@ -14,26 +14,21 @@ void print_all(const char * const format, ...)
 	const char b_format[] = "cifs";
 
 	va_start(lists, format);
-
 	while (format && format[i])
 	{
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(lists, int));
-				flag = 1;
+				printf("%c", va_arg(lists, int)), flag = 1;
 				break;
 			case 'i':
-				printf("%d", va_arg(lists, int));
-				flag = 1;
+				printf("%d", va_arg(lists, int)), flag = 1;
 				break;
 			case 'f':
-				printf("%f", va_arg(lists, double));
-				flag = 1;
+				printf("%f", va_arg(lists, double)), flag = 1;
 				break;
 			case 's':
-				str = va_arg(lists, char *);
-				flag = 1;
+				str = va_arg(lists, char *), flag = 1;
 				if (str == NULL)
 				{
 					printf("(nil)");
@@ -41,8 +36,7 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", str);
 				break;
-		}
-		i++;
+		} i++;
 		j = 0;
 		while (b_format[j])
 		{
@@ -50,10 +44,8 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			}
-			j++;
+			} j++;
 		}
-	}
-	printf("\n");
+	} printf("\n");
 	va_end(lists);
 }
