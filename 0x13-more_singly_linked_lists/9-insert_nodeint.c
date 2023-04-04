@@ -20,14 +20,26 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			nth = nth->next;
 			i++;
 		}
+		tmp = nth;
+		tmp2 = nth->next;
+		nth = malloc(sizeof(listint_t));
+		if (nth == NULL)
+			return (NULL);
+		nth->n = n;
+		tmp->next = nth;
+		nth->next = tmp2;
 	}
-	tmp = nth;
-	tmp2 = nth->next;
-	nth = malloc(sizeof(listint_t));
-	if (nth == NULL)
-		return (NULL);
-	nth->n = n;
-	tmp->next = nth;
-	nth->next = tmp2;
+	else
+	{
+		if (idx == 0)
+		{
+			nth = malloc(sizeof(listint_t));
+			if (nth == NULL)
+				return (NULL);
+			nth->n = n;
+			nth->next = NULL;
+			*head = nth;
+		}
+	}
 	return (nth);
 }
