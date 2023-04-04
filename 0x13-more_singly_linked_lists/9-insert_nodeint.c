@@ -55,7 +55,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
  * insertnode - insets a node at the very begining
  * @head: pointer to the first node
  * @n: value of the node
- * Return pointer to the inserted node
+ * Return: pointer to the inserted node
  */
 listint_t *insertnode(listint_t **head, int n)
 {
