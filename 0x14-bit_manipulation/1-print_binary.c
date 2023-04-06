@@ -7,14 +7,7 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int scan = 1;
-	int i;
-
-	for (i = (sizeof(unsigned long int) * 8) - 1; i >= 0; i--)
-	{
-		if ((n >> i) & scan)
-			_putchar('1');
-		else
-			_putchar('0');
-	}
+	if (n > 1)
+		print_binary(n >> 1);
+	_putchar((n & 1) + '0');
 }
