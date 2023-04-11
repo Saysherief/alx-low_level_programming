@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	filep = fopen(filename, "r");
 	if (filep == NULL)
 		return (0);
-	content = malloc(sizeof(char) * (letters + 1));
+	content = malloc(sizeof(char) * letters + 1);
 	if (content == NULL)
 		return (0);
 	nread = fread(content, sizeof(char), letters, filep);
