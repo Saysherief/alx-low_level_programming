@@ -3,41 +3,43 @@
 size_t dlistint_len(const dlistint_t *h);
 /**
  * insert_dnodeint_at_index - inserts a new node at a given position
- * @head: the pointer to the pointer of the first node of dlistint_t
+ * @h: the pointer to the pointer of the first node of dlistint_t
  * @idx: the index of the new node to be added in dlistint_t
  * @n: value of the new node
  * Return: the address of the nth node or NULL if it fails
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *tmp = *head, *tmp2, *nth = NULL;
+	dlistint_t *tmp = *h, *tmp2, *nth = NULL;
 	unsigned int i = 0, len = (dlistint_len(tmp));
 
 	if (idx > len)
 		return (NULL);
-	else if ((*head == NULL) && (idx == 0))
+	else if ((*h == NULL) && (idx == 0))
 	{
 		nth = add_dnodeint(&tmp, n);
 		nth->next = NULL;
 		nth->prev = NULL;
-		*head = nth;
+		*h = nth;
 	}
 	else
 	{
 		if (idx == 0)
 		{
 			nth = add_dnodeint(&tmp, n);
-			nth->next = *head;
+			nth->next = *h;
 			nth->prev = NULL;
-			*head = nth;
+			*h = nth;
 		}
 		else if (idx == len)
 		{
 			nth = add_dnodeint_end(&tmp, n);
+			nth->next = NULL;
+			nth->prev = nth->prev;
 		}
 		else
 		{
-			nth = *head;
+			nth = *h;
 			while ((i < idx - 1) && nth != NULL)
 			{
 				nth = nth->next;
