@@ -15,39 +15,36 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (idx > len || *h == NULL)
 		return (NULL);
+	if (idx == 0)
+	{
+		nth = add_dnodeint(&tmp, n);
+		nth->next = *h;
+		nth->prev = NULL;
+		*h = nth;
+	}
+	else if (idx == len)
+	{
+		nth = add_dnodeint_end(&tmp, n);
+		nth->next = NULL;
+	}
 	else
 	{
-		if (idx == 0)
+		nth = *h;
+		while (i < (idx - 1) && nth != NULL)
 		{
-			nth = add_dnodeint(&tmp, n);
-			nth->next = *h;
-			nth->prev = NULL;
-			*h = nth;
+			nth = nth->next;
+			i++;
 		}
-		else if (idx == len)
-		{
-			nth = add_dnodeint_end(&tmp, n);
-			nth->next = NULL;
-		}
-		else
-		{
-			nth = *h;
-			while ((i < idx - 1) && nth != NULL)
-			{
-				nth = nth->next;
-				i++;
-			}
-			tmp = nth;
-			tmp2 = nth->next;
-			nth = malloc(sizeof(dlistint_t));
-			if (nth == NULL)
-				return (NULL);
-			nth->n = n;
-			tmp->next = nth;
-			nth->prev = tmp;
-			nth->next = tmp2;
-			tmp2->prev = nth;
-		}
+		tmp = nth;
+		tmp2 = nth->next;
+		nth = malloc(sizeof(dlistint_t));
+		if (nth == NULL)
+			return (NULL);
+		nth->n = n;
+		tmp->next = nth;
+		nth->prev = tmp;
+		nth->next = tmp2;
+		tmp2->prev = nth;
 	}
 	return (nth);
 }
